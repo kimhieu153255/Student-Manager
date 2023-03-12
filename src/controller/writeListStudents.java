@@ -9,8 +9,10 @@ public class writeListStudents {
   public void writeListStudent(List<Student> listStudent) {
     File file = new File("bin/Input.bin");
     try {
-      if (!file.exists())
+      if (!file.exists()) {
+        new File("bin/").mkdirs();
         file.createNewFile();
+      }
       FileOutputStream fos = new FileOutputStream("bin/Input.bin");
       ObjectOutputStream oos = new ObjectOutputStream(fos);
       oos.writeObject(listStudent);

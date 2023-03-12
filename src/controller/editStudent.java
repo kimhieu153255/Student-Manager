@@ -14,11 +14,13 @@ public class editStudent {
       // Get data from inputs
       JTextField IDField = (JTextField) inputs[1];
       String ID = IDField.getText();
+      System.out.println(ID);
       JTextField nameField = (JTextField) inputs[3];
       String name = nameField.getText();
       JTextField markField = (JTextField) inputs[5];
       String mark = markField.getText();
       String image = ID + ".jpg";
+      System.out.println(image);
       JTextField addressField = (JTextField) inputs[10];
       String address = addressField.getText();
       JTextField noteField = (JTextField) inputs[12];

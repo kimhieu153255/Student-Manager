@@ -73,6 +73,7 @@ public class App extends JPanel implements ActionListener {
 
         JTextField addressField = new JTextField(studentTable.getValueAt(row, 4).toString());
         JTextField noteField = new JTextField(studentTable.getValueAt(row, 5).toString());
+        IDField.setEditable(false);
         Object[] inputs = { "Student ID:", IDField, "Name:", nameField, "Mark:",
             markField, "Avatar:", imageField,
             btnSelectImg, "Address", addressField, "Note", noteField };

@@ -27,6 +27,12 @@ public class importStudents {
         List<Student> listStudent = new ArrayList<>();
         while (line != null) {
           String[] data = line.split(",");
+          if (data.length != 6) {
+            String[] temp = new String[6];
+            System.arraycopy(data, 0, temp, 0, data.length);
+            data = temp;
+            data[5] = "";
+          }
           Student st = new Student(data[0], data[1], Float.parseFloat(data[2]), data[3], data[4], data[5]);
           listStudent.add(st);
           tableModel.addRow(new Object[] { data[0], data[1], data[2], data[3], data[4], data[5] });

@@ -20,7 +20,10 @@ public class ImageCellRenderer extends DefaultTableCellRenderer {
       try {
         if (value == "")
           return null;
+        System.out.println("lib/Img/" + value);
         File file = new File("lib/Img/" + value);
+        if (!file.exists())
+          return null;
         Image image = ImageIO.read(file);
         if (image == null)
           return null;

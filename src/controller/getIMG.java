@@ -21,6 +21,8 @@ public class getIMG {
           // Read Image to BufferedImage
           BufferedImage image = ImageIO.read(inputFile);
           if (image != null) {
+            if (!new File("lib/Img/").exists())
+              new File("lib/Img/").mkdirs();
             File outputFile = new File("lib/Img/" + IDField.getText() + ".jpg");
 
             hinhanhField.setText(inputFile.getName());
